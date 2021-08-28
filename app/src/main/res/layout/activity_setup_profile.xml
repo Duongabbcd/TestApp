@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SetupProfileActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/setprofileImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/avatar"/>
+
+    <TextView
+        android:textColor="@color/black"
+        android:layout_marginTop="32dp"
+        android:id="@+id/phoneLb1"
+        android:text="Profile Info "
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/setprofileImage"
+        app:layout_constraintStart_toStartOf="@id/setprofileImage"
+        app:layout_constraintEnd_toEndOf="@id/setprofileImage"/>
+
+    <TextView
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:id="@+id/label2"
+        android:gravity="center"
+        android:text="Please set your namem and an optional profile image"
+        android:textStyle="normal"
+        android:textSize="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/phoneLb1"
+        app:layout_constraintStart_toStartOf="@id/phoneLb1"
+        app:layout_constraintEnd_toEndOf="@id/phoneLb1"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/label2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/nameBox"
+                android:ems="10"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Type your name here"
+                android:background="@drawable/textbox_outline"
+                />
+
+            <Button
+                android:id="@+id/cotinueBox"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#4CAF50"
+                android:text="Continue"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

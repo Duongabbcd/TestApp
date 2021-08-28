@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/mobile_auth"/>
+
+    <TextView
+        android:textColor="@color/black"
+        android:layout_marginTop="32dp"
+        android:id="@+id/label1"
+        android:text="Verify your phone number "
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="@id/imageView"
+        app:layout_constraintEnd_toEndOf="@id/imageView"/>
+
+    <TextView
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:id="@+id/label2"
+        android:gravity="center"
+        android:text="WhatsApp will send an SMS message to verify your phone number "
+        android:textStyle="normal"
+        android:textSize="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/label1"
+        app:layout_constraintStart_toStartOf="@id/label1"
+        app:layout_constraintEnd_toEndOf="@id/label1"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/label2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/phoneBox"
+                android:ems="10"
+                android:padding="10dp"
+                android:phoneNumber="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Type your phone number here"
+                android:background="@drawable/textbox_outline"
+                />
+
+            <Button
+                android:id="@+id/cotinueBtn"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#4CAF50"
+                android:text="Continue"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
